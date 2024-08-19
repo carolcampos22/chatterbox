@@ -1,6 +1,7 @@
-# Labeddit
+# Chatterbox
 
-Este é o repositório do backend da aplicação LabEddit. Trata-se de uma rede social no estilo Reddit, onde os usuários podem se cadastrar, postar textos, comentar posts de outros usuários, além de poder dar like e dislike nesses posts. O repositório do front-end pode ser encontrado no seguinte link: https://github.com/carolcampos22/labeddit-frontend. O site da aplicação pode ser acessado [neste link](https://labeddit-frontend-delta.vercel.app/).
+Este é o repositório do backend da aplicação Chatterbox. Trata-se de uma rede social no estilo Reddit, onde os usuários podem se cadastrar, postar textos, comentar posts de outros usuários, além de poder dar like e dislike nesses posts. 
+<!-- O repositório do front-end pode ser encontrado no seguinte link: https://github.com/carolcampos22/chatterbox-frontend. O site da aplicação pode ser acessado [neste link](#). -->
  
 
 ## Requisitos
@@ -55,8 +56,8 @@ Além dessas tecnologias, foram utilizados conceitos de arquitetura em camadas e
     ```
 Agora, o servidor estará rodando em http://localhost:3000. Você pode utilizar o [Postman](https://www.postman.com/) ou outra ferramenta de sua preferência para testar os endpoints.
 
-## Documentação da API
-A documentação da API está disponível [aqui](https://documenter.getpostman.com/view/26570634/2s9YJgTLat).
+<!-- ## Documentação da API
+A documentação da API está disponível [aqui](#). -->
 
 ## Estruturação das pastas do projeto
 
