@@ -10,6 +10,7 @@ CREATE TABLE users(
 CREATE TABLE posts(
     id TEXT PRIMARY KEY UNIQUE NOT NULL,
     creator_id TEXT NOT NULL,
+    title TEXT NOT NULL,
     content TEXT NOT NULL,
     likes INTEGER DEFAULT (0) NOT NULL,
     dislikes INTEGER DEFAULT (0) NOT NULL,
@@ -54,14 +55,8 @@ CREATE TABLE likes_dislikes(
 
 INSERT INTO users (id, nickname, email, password, role)
 VALUES 
-    ('u01', '@fulaninha', 'fufu@email.com', '$2a$12$kYh8KFIG7LKB0tCa7QJTBOBOn8/I6zzNcgQ4X8hyTQI.2rgAffpWO', 'NORMAL'), /*123456*/
-    ('u02', '@bel', 'bel@email.com', '$2a$12$VSFxFt8K6Wog542mH8psbuL.CaZDah2gGGtrxKrJ48ms5EgxhwN2y', 'ADMIN'),/*osaetij*/
-    ('u03', '@si', 'sisi@email.com', '$2a$12$.CvvRUD4fsijWNla11m7/.xtwO3favDAvYix/HMx6KapkgkooR7pq', 'NORMAL');/*sisi123*/
+    ('1', 'alice_admin', 'alice.admin@example.com', 'adminpassword', 'ADMIN');
 
-INSERT INTO posts(id, creator_id, content)
-VALUES
-    ('p01', 'u02', 'Com o avanço da tecnologia, são muitas as opções de cursos e bootcamps que encontramos na internet, com diversos conteúdos e tecnologias pra serem aprendidas, Mas o que o mercado de trabalho mais tem pedido como experiência? O que mais vale a pena aprender, React, Angular, Vue...? Front ou backend?'),
-    ('p02', 'u03', 'Muitas pessoas terminam um bootcamp de desenvolvimento web full-stack já sabendo que caminho vai seguir. Outras, ficam nessa dúvida. O que você acha? Deixem seus comentários!!');
 
 INSERT INTO comments (id, id_post, creator_id, message)
 VALUES
@@ -73,8 +68,6 @@ SELECT * FROM users;
 SELECT * FROM comments;
 SELECT * FROM likes_dislikes;
 
-DROP TABLE users;
-DROP TABLE posts;
-DROP TABLE comments;
-DROP TABLE likes_dislikes;
+
+
     

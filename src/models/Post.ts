@@ -1,6 +1,7 @@
 export interface PostDB {
     id: string,
     creator_id: string,
+    title: string,
     content: string,
     likes: number,
     dislikes: number,
@@ -12,6 +13,7 @@ export interface PostDB {
 export interface PostDBWithCreatorNickname {
     id: string,
     creator_id: string,
+    title: string,
     content: string,
     likes: number,
     dislikes: number,
@@ -24,6 +26,7 @@ export interface PostDBWithCreatorNickname {
 export interface PostModel {
     id: string,
     content: string,
+    title: string,
     likes: number,
     dislikes: number,
     comments: number,
@@ -50,6 +53,7 @@ export enum POST_LIKE {
 export class Post {
     constructor(
         private id: string,
+        private title: string,
         private content: string,
         private likes: number,
         private dislikes: number,
@@ -68,6 +72,13 @@ export class Post {
         this.id = value
     }
 
+    public getTitle(): string {
+        return this.title
+    }
+
+    public setTitle(value: string): void {
+        this.title = value
+    }
 
     public getContent(): string {
         return this.content
@@ -154,6 +165,7 @@ export class Post {
         return {
             id: this.id,
             creator_id: this.creatorId,
+            title: this.title,
             content: this.content,
             likes: this.likes,
             dislikes: this.dislikes,
@@ -166,6 +178,7 @@ export class Post {
     public toBusinessModel(): PostModel {
         return {
             id: this.id,
+            title: this.title,
             content: this.content,
             likes: this.likes,
             dislikes: this.dislikes,

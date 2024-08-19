@@ -17,6 +17,7 @@ export class PostController {
         try {
 
             const input = CreatePostSchema.parse({
+                title: req.body.title,
                 content: req.body.content,
                 token: req.headers.authorization
             })
@@ -67,6 +68,7 @@ export class PostController {
 
             const input = EditPostSchema.parse({
                 token: req.headers.authorization,
+                title: req.body.title,
                 content: req.body.content,
                 idToEdit: req.params.id
             })

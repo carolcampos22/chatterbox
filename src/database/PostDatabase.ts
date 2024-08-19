@@ -22,6 +22,7 @@ export class PostDatabase extends BaseDatabase {
             .select(
                 `${PostDatabase.TABLE_POSTS}.id`,
                 `${PostDatabase.TABLE_POSTS}.creator_id`,
+                `${PostDatabase.TABLE_POSTS}.title`,
                 `${PostDatabase.TABLE_POSTS}.content`,
                 `${PostDatabase.TABLE_POSTS}.likes`,
                 `${PostDatabase.TABLE_POSTS}.dislikes`,
