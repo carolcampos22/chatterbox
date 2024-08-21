@@ -1,7 +1,7 @@
 # Chatterbox
 
 Este é o repositório do backend da aplicação Chatterbox. Trata-se de uma rede social no estilo Reddit, onde os usuários podem se cadastrar, postar textos, comentar posts de outros usuários, além de poder dar like e dislike nesses posts. 
-<!-- O repositório do front-end pode ser encontrado no seguinte link: https://github.com/carolcampos22/chatterbox-frontend. O site da aplicação pode ser acessado [neste link](#). -->
+O repositório do front-end pode ser encontrado no seguinte link: https://github.com/carolcampos22/chatterbox-frontend. <!-- O site da aplicação pode ser acessado [neste link](#). -->
  
 
 ## Requisitos
@@ -26,12 +26,12 @@ Além dessas tecnologias, foram utilizados conceitos de arquitetura em camadas e
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/carolcampos22/labeddit-backend.git
+   git clone https://github.com/carolcampos22/chatterbox.git
    ```
 
 2. Acesse o diretório do projeto:
     ```bash
-        cd labeddit-backend
+        cd chatterbox-backend
 
     ```
 
@@ -59,7 +59,7 @@ Agora, o servidor estará rodando em http://localhost:3000. Você pode utilizar 
 <!-- ## Documentação da API
 A documentação da API está disponível [aqui](#). -->
 
-## Estruturação das pastas do projeto
+<!-- ## Estruturação das pastas do projeto
 
 ![](./src/assets/estrutura-de-pastas.png)
 
@@ -75,7 +75,7 @@ Endpoint para visualização de todos os posts
 
 #### Get comments
 Endpoint para visualização dos comentários de um post, ao passar o ID desse post.
-![](./src/assets/getcomments.png)
+![](./src/assets/getcomments.png) -->
 
 Todos os endpoints são protegidos, ou seja, é necessário um token para criação e visualização de posts e comentários. O token é gerado ao cadastrar um novo usuário (signup) ou fazer login no sistema.
 
