@@ -81,7 +81,7 @@ export class PostBusiness {
     }
 
     public editPost = async (input: EditPostInputDTO): Promise <EditPostOutputDTO> => {
-        const {content, token, idToEdit} = input
+        const {title, content, token, idToEdit} = input
 
         const payload = this.tokenManager.getPayload(token)
 
@@ -113,6 +113,7 @@ export class PostBusiness {
         )
 
         post.setContent(content)
+        post.setTitle(title)
        
 
         const updatedPostdDB = post.toDBModel()
@@ -164,7 +165,7 @@ export class PostBusiness {
         const postDBWithCreatorNickname = await this.postDatabase.findPostWithCreatorNameById(postId)
 
         if(!postDBWithCreatorNickname){
-            throw new NotFoundError("ID de playlist não encontrada")
+            throw new NotFoundError("ID de post não encontrada")
         }
 
         const post = new Post(
