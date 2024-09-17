@@ -165,7 +165,7 @@ export class CommentsBusiness {
         }
 
         await this.commentsDatabase.deleteCommentById(idToDelete)
-        await this.commentsDatabase.decrementComments(commentDB.id)
+        await this.commentsDatabase.decrementComments(commentDB.id_post)
         
         const output: DeleteCommentOutputDTO = undefined
 
