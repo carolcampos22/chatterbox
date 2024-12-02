@@ -8,7 +8,8 @@
  "removeComments": true, /* Do not emit comments to output. */
  "noImplicitAny": true, /* Raise error on declarations with an implied 'any' type.*/
  "esModuleInterop": true,
- "strict": true
+ "strict": true,
+ "skipLibCheck": true
  },
  "exclude": ["./tests/*"] 
 }
